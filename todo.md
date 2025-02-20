@@ -2,8 +2,14 @@
 
 ## 1. Todo
 
-### Responsive design
-
-  - [] Poner el texto final a ambos parrafos
+**Responsive design**
   - [] Hacer el diseño responsive
+
+**Performance**
+  - [] Optimizar las fuentes
   
+
+## Done
+
+**Responsive design**
+  - [x] Poner el texto final a ambos parrafos
