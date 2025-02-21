@@ -11,13 +11,13 @@ const tags = ["<h1>", "</h1>", "Experience"];
     <div class="ball" style="--delay:-10s;--size:0.3;--speed:9s;"></div>
   </div>
   <section
-    class="showcase 2xl:px-16 px-8 flex flex-col justify-center h-screen xl:px-16"
+    class="showcase 2xl:px-26 px-8 md:px-16 flex flex-col justify-center h-screen xl:px-20"
   >
     <div class="">
-      <p class="text-sm md:text-xl">Hello world, I am</p>
+      <p class="text-sm md:text-xl italic">Hello world, I am ...</p>
       <h1
         class="text-gray-50 font-bold 2xl:text-9xl text-4xl md:text-7xl xl:text-8xl
-      monomakh-regular"
+      monomakh-regular duration-150 first:pl-0 last:pr-0 drop-shadow-[0px_0px_10px_#666666]"
       >
         Renzo Valentin
       </h1>
@@ -25,12 +25,13 @@ const tags = ["<h1>", "</h1>", "Experience"];
 
     <div class="2xl:my-8 space-y-8 my-4 md:my-6">
       <p
-        class="text-gray-400 font-medium 2xl:max-w-2xl xl:max-w-xl 2xl:text-lg text-sm md:text-lg"
+        class="text-gray-350 font-normal 2xl:max-w-2xl xl:max-w-xl 2xl:text-xl text-sm md:text-lg"
       >
-        A full-stack web developer with over 2 years of experience in building
-        high-performance enterprise software tailored to business needs.
-        Specializing in AI-powered applications, I create practical solutions
-        for real-world challenges.
+        A <span class="font-extrabold text-gray-50"
+          >full-stack web developer</span
+        > with +2 years of experience in building high-performance enterprise software
+        tailored to business needs. Specializing in AI-powered applications, I create
+        practical solutions for real-world challenges.
       </p>
       <p
         class="text-gray-400 font-medium 2xl:max-w-2xl xl:max-w-xl 2xl:text-lg text-sm md:text-lg"
@@ -46,21 +47,21 @@ const tags = ["<h1>", "</h1>", "Experience"];
     >
       <a
         href="/blog"
-        class="monomakh-regular"
+        class="monomakh-regular underline duration-150 first:pl-0 last:pr-0 hover:scale-110 hover:drop-shadow-[0px_0px_10px_#E05E58]"
         aria-label="View Renzo Valentin's Blog"
       >
         Blog
       </a>
       <a
         href="/projects"
-        class="monomakh-regular"
+        class="monomakh-regular underline duration-150 first:pl-0 last:pr-0 hover:scale-110 hover:drop-shadow-[0px_0px_10px_#E05E58]"
         aria-label="View Renzo Valentin's Projects"
       >
         Projects
       </a>
       <a
         href="/Experience"
-        class="monomakh-regular"
+        class="monomakh-regular underline duration-150 first:pl-0 last:pr-0 hover:scale-110 hover:drop-shadow-[0px_0px_10px_#E05E58]"
         aria-label="View Renzo Valentin's Work Experience"
       >
         Experience
