@@ -8,6 +8,7 @@ body {
   color: #eee4e4;
 }
 
+
 *,
 *::before,
 *::after {
@@ -21,6 +22,12 @@ body {
   /* Color del texto negro */
 }
 
+.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
 body {
   margin: 0;

@@ -2,8 +2,11 @@
 
 ## 1. Todo
 
-**Responsive design**
+**Design**
   - [] Hacer el diseño responsive
+  - [] Hacer el diseno del blog
+  - [] Hacer el diseno de proyectos
+  - [] Hacer la pagina 404
 
 **Performance**
   - [] Optimizar las fuentes

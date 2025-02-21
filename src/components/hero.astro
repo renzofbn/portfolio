@@ -7,56 +7,66 @@ const tags = ["<h1>", "</h1>", "Experience"];
   <div class="tracker"></div>
   <div class="glow-container">
     <div class="ball"></div>
-    <div class="ball" style="--delay:-12s;--size:0.35;--speed:25s;"></div>
-    <div class="ball" style="--delay:-10s;--size:0.3;--speed:15s;"></div>
+    <div class="ball" style="--delay:-12s;--size:0.35;--speed:15s;"></div>
+    <div class="ball" style="--delay:-10s;--size:0.3;--speed:9s;"></div>
   </div>
-  <section class="showcase px-16">
-    <div class="pt-38">
-      <span> Hello world, I am </span>
-      <h1 class="text-gray-50 text-9xl font-bold
-      monomakh-regular">
+  <section
+    class="showcase 2xl:px-16 px-8 flex flex-col justify-center h-screen"
+  >
+    <div class="">
+      <p class="text-sm md:text-xl">Hello world, I am</p>
+      <h1
+        class="text-gray-50 font-bold 2xl:text-9xl text-4xl md:text-6xl xl:text-8xl
+      monomakh-regular"
+      >
         Renzo Valentin
       </h1>
     </div>
 
-    <div class="my-8 space-y-8">
-      <p class="text-gray-400 text-lg font-medium max-w-2xl">
+    <div class="2xl:my-8 space-y-8 my-4 md:my-6">
+      <p
+        class="text-gray-400 font-medium 2xl:max-w-2xl lg:max-w-lg xl:max-w-xl 2xl:text-lg text-sm md:text-lg"
+      >
         A full-stack web developer with over 2 years of experience in building
         high-performance enterprise software tailored to business needs.
         Specializing in AI-powered applications, I create practical solutions
         for real-world challenges.
       </p>
-      <p class="text-gray-400 text-lg font-medium max-w-2xl">
+      <p
+        class="text-gray-400 font-medium max-w-2xl 2xl:text-lg text-sm md:text-xl"
+      >
         I have a deep curiosity for how things work, which drives me to
         constantly explore and improve. More than just writing code, I focus on
         solving complex problems and creating meaningful solutions that make an
         impact.
       </p>
     </div>
-    <div class="flex mt-20 gap-8 font-extrabold text-4xl">
+    <div
+      class="flex font-extrabold 2xl:text-4xl text-lg 2xl:gap-8 2xl:mt-20 mt-8 gap-4"
+    >
       <a
         href="/blog"
-        class="textmarker-effect monomakh-regular"
+        class="monomakh-regular"
         aria-label="View Renzo Valentin's Blog"
       >
         Blog
       </a>
       <a
         href="/projects"
-        class="textmarker-effect monomakh-regular"
+        class="monomakh-regular"
         aria-label="View Renzo Valentin's Projects"
       >
         Projects
       </a>
       <a
         href="/Experience"
-        class="textmarker-effect monomakh-regular"
+        class="monomakh-regular"
         aria-label="View Renzo Valentin's Work Experience"
       >
         Experience
       </a>
     </div>
-    <div class="mt-22">
+    <div class="fixed-bottom 2xl:mb-16 mb-8">
       <p class="text-gray-300 text-sm font-light mb-2 italic">
         You can find me on:
       </p>
