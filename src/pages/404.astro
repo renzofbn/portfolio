@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout title="404 not found">
+  <main>
+    <div class="tracker"></div>
+    <div class="glow-container">
+      <div class="ball"></div>
+      <div class="ball" style="--delay:-12s;--size:0.35;--speed:15s;"></div>
+      <div class="ball" style="--delay:-10s;--size:0.3;--speed:9s;"></div>
+    </div>
+  </main>
+  <div class="showcase flex flex-col items-center justify-center min-h-screen">
+    <h1
+      class="md:text-9xl text-5xl sm:text-7xl text-center text-gray-50 duration-150 first:pl-0 last:pr-0 drop-shadow-[0px_0px_10px_#666666]"
+    >
+      404
+    </h1>
+    <span class="text-gray-300 sm:text-2xl text-lg">Content not found</span>
+  </div>
+</Layout>
