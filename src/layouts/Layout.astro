@@ -26,3 +26,14 @@ const { title = "renzofbn" } = Astro.props;
 		background-color: #060606;
 	}
 </style>
+<script>
+	const moveElements = (e: any) => {
+		const tracker = document.querySelector(".tracker") as HTMLElement;
+
+		tracker.style.top = `${e.clientY}px`;
+		tracker.style.left = `${e.clientX}px`;
+		tracker.style.opacity = "1";
+	};
+
+	document.addEventListener("mousemove", moveElements);
+</script>
