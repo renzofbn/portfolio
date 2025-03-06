@@ -9,8 +9,15 @@
   - [] Mejorar el efecto de glow del background
   - [] Revisar una forma de hacer el texto del centro mas legible
 
+**Blog**
+  - [] Hacer el header del blog
+  - [] Cartas de los posts
+  - [] Hacer el footer del blog
+  - [] Layout con titulo personalizado
+
 **Performance**
   - [] Optimizar las fuentes
+  - [] Agregar metadatos
   
 
 ## Done

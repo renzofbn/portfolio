@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { remarkAlert } from "remark-github-blockquote-alert";
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -7,5 +8,11 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
-  }
+  },
+  markdown: {
+    remarkPlugins: [remarkAlert],
+    shikiConfig: {
+      theme: 'vitesse-dark',
+    },
+  },
 });

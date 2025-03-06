@@ -1,0 +1,36 @@
+---
+import Navigation from "../../components/navigation.astro";
+import Layout from "../../layouts/Layout.astro";
+import PostCard from "../../components/postCard.astro";
+import GoBack from "../../components/goBack.astro";
+const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
+---
+
+<Layout>
+  <div class="tracker"></div>
+  <div class="flex justify-center">
+    <div class="container max-w-4xl text-left p-6">
+      <div class="mb-6 mt-8">
+        <GoBack url="/" />
+        <h1 class="text-6xl mt-4">Posts</h1>
+        <p>
+          Este es un texto alineado a la izquierda dentro de una columna
+          centrada.
+        </p>
+      </div>
+      <div>
+        {
+          allPosts.map((post: any) => (
+            <PostCard
+              url={post.url}
+              title={post.frontmatter.title}
+              desc={post.frontmatter.description}
+              tags={post.frontmatter.tags}
+              date={post.frontmatter.pubDate}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
