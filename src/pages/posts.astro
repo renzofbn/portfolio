@@ -1,12 +1,14 @@
 ---
-import Navigation from "../../components/navigation.astro";
-import Layout from "../../layouts/Layout.astro";
-import PostCard from "../../components/postCard.astro";
-import GoBack from "../../components/goBack.astro";
-const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
+import Navigation from "../components/navigation.astro";
+import Layout from "../layouts/Layout.astro";
+import PostCard from "../components/postCard.astro";
+import GoBack from "../components/goBack.astro";
+const allPosts = Object.values(
+  import.meta.glob("./posts/*.md", { eager: true }),
+);
 ---
 
-<Layout>
+<Layout title="Posts | renzofbn">
   <div class="tracker"></div>
   <div class="flex justify-center">
     <div class="container max-w-4xl text-left p-6">

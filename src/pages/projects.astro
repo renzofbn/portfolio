@@ -1,0 +1,33 @@
+---
+import ProjectCard from "../components/projectCard.astro";
+import ProjectLayout from "../components/projectLayout.astro";
+
+const projects = [
+  {
+    title: "Portfolio",
+    description: "Description of project 1",
+    gh_url: "https://github.com/renzofbn/portfolio",
+    live_url: "https://www.renzofbn.tech/",
+    tools: [
+      {
+        name: "Astro",
+        value: "astro",
+      },
+      {
+        name: "Typescript",
+        value: "typescript",
+      },
+      {
+        name: "Tailwind",
+        value: "tailwindcss",
+      },
+    ],
+  },
+];
+
+const n_repo = projects.length;
+---
+
+<ProjectLayout n_repo={n_repo}>
+  {projects.map((project) => <ProjectCard project={project} />)}
+</ProjectLayout>

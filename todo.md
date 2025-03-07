@@ -3,17 +3,14 @@
 ## 1. Todo
 
 **Design**
-  - [] Hacer el diseno del blog
-  - [] Hacer el diseno de proyectos
   - [] Agregar letras negritas a ciertas letras del texto
   - [] Mejorar el efecto de glow del background
   - [] Revisar una forma de hacer el texto del centro mas legible
 
+
 **Blog**
-  - [] Hacer el header del blog
-  - [] Cartas de los posts
-  - [] Hacer el footer del blog
-  - [] Layout con titulo personalizado
+  - [] Redactar 3 post al ingles
+  - [] Agregar boton de copiar
 
 **Performance**
   - [] Optimizar las fuentes
@@ -22,10 +19,20 @@
 
 ## Done
 
-**Responsive design**
+**Design**
   - [x] Poner el texto final a ambos parrafos
   - [X] Hacer el diseño responsive
   - [X] Agregar glow a los titulos
   - [X] Agregar un underline a los links
   - [X] Hacer la pagina 404
   - [X] Revisar como se ve en telefonos
+  - [] Hacer el diseno de proyectos
+
+  **Blog**
+  - [X] Hacer el diseno del blog
+  - [X] Cartas de los posts
+  - [X] Hacer el footer del blog
+  - [X] Layout con titulo personalizado
+
+## Canceled
+ - Header al post (con busqueda)
