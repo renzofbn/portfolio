@@ -1,19 +1,19 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Decoradores en Python'
+title: 'Decorators in Python'
 pubDate: 2025-03-01
 description: 'This is the first post of my new Astro blog.'
 author: 'renzofbn'
 tags: ["Python"]
 tableOfContents: true
 ---
-# Decoradores
 
-Los decoradores son una forma elegante y poderosa de modificar o extender el comportamiento de una función o clase sin modificar su implementación original. Los decoradores permiten envolver una función o clase con otra función que agrega funcionalidad adicional antes o después de la ejecución de la función original.
 
-Para entender como funcionan los decoradores debemos entender un concepto:
+**Decorators** in Python are a powerful and elegant way to modify or extend the behavior of a function or class without altering its original implementation. They work by wrapping a function or class with another function that adds additional functionality before or after execution.
 
-# Closures
+To understand how decorators work, we first need to grasp the concept of **closures**.
+
+# **Closures in Python**
 
 Una función que guarda referencias a variables locales en su entorno de definición, incluso cuando la función ha terminado de ejecutarse. Esto significa que la función puede acceder y recordar los valores de esas variables aunque ya no existan en la memoria. El concepto de closure se basa en la capacidad de Python de tratar las funciones como objetos de primera clase, lo que permite que las funciones sean asignadas a variables, pasadas como argumentos y retornadas como valores.
 

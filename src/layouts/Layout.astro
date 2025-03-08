@@ -21,13 +21,28 @@ import "../styles/global.css";
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		width: 100%;
-		height: 100%;
+<style is:global>
+	@font-face {
+		font-family: "Geist";
+		src: url("/fonts/Geist[wght].woff2") format("woff2");
+		font-weight: 100 900;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: "Geist mono";
+		src: url("/fonts/GeistMono[wght].woff2") format("woff2");
+		font-weight: 100 900;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	html {
+		font-family: "Geist", system-ui, sans-serif;
 	}
 </style>
+
 <script>
 	const moveElements = (e: any) => {
 		const tracker = document.querySelector(".tracker") as HTMLElement;

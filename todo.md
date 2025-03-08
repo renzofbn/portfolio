@@ -10,11 +10,11 @@
 
 **Blog**
   - [] Redactar 3 post al ingles
-  - [] Agregar boton de copiar
 
 **Performance**
   - [] Optimizar las fuentes
   - [] Agregar metadatos
+  - [] Quitar Lit
   
 
 ## Done
@@ -33,6 +33,8 @@
   - [X] Cartas de los posts
   - [X] Hacer el footer del blog
   - [X] Layout con titulo personalizado
+  - [X] Agregar boton de copiar
+
 
 ## Canceled
  - Header al post (con busqueda)

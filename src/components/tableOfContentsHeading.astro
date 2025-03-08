@@ -3,11 +3,15 @@
 const { heading } = Astro.props;
 ---
 
-<li>
-  <a href={"#" + heading.slug}>
+<li class="pb-1">
+  <a
+    href={"#" + heading.slug}
+    class="hover:text-[#A3A3A3] underline underline-offset-3 decoration-dotted font-bold"
+  >
     {heading.text}
   </a>
-  {
+  <!-- Ignore subheadings for now -->
+  <!-- {
     heading.subheadings.length > 0 && (
       <ul class="pl-4">
         {heading.subheadings.map((subheading: any) => (
@@ -15,5 +19,5 @@ const { heading } = Astro.props;
         ))}
       </ul>
     )
-  }
+  } -->
 </li>
