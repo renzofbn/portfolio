@@ -1,6 +1,8 @@
 ---
 const { title = "renzofbn" } = Astro.props;
 import "../styles/global.css";
+
+import { ClientRouter } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -15,6 +17,7 @@ import "../styles/global.css";
 		<link rel="manifest" href="/site.webmanifest" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ClientRouter />
 	</head>
 	<body class="showcase">
 		<slot />
