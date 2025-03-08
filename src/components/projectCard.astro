@@ -4,18 +4,18 @@ import Badge from "./badge.astro";
 const { project } = Astro.props;
 ---
 
-<div
-  class="border border-neutral-700 rounded-lg p-4 w-full transition-colors duration-300"
->
+<div class="border-b-2 border-dashed border-neutral-800 pb-4 pt-6">
   <div class="flex justify-between items-center">
     {
       project.live_url ? (
         <a
           href={project.live_url}
-          class="group hidden items-center space-x-[4px] text-sm tracking-tight opacity-70 transition-opacity duration-100 hover:opacity-100 md:flex"
+          class="group hidden items-center space-x-[4px] text-sm tracking-tight md:flex hover:text-gray-400"
           target="_blank"
         >
-          <h2 class="text-xl font-bold">{project.title}</h2>
+          <h2 class="text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline">
+            {project.title}
+          </h2>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +35,9 @@ const { project } = Astro.props;
           </svg>
         </a>
       ) : (
-        <h2 class="text-xl font-bold">{project.title}</h2>
+        <h2 class="text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline">
+          {project.title}
+        </h2>
       )
     }
     {
@@ -43,7 +45,7 @@ const { project } = Astro.props;
         <a
           href={project.gh_url}
           target="_blank"
-          class="duration-150 first:pl-0 last:pr-0 hover:scale-110 hover:drop-shadow-[0px_0px_10px_#E05E58]"
+          class="duration-150 first:pl-0 last:pr-0 hover:scale-110 hover:drop-shadow-[0px_0px_10px_#FF6467]"
           aria-label="View Renzo Valentin's GitHub"
         >
           <svg
@@ -61,8 +63,9 @@ const { project } = Astro.props;
     }
   </div>
 
-  <p class="text-gray-200 font-light mt-2 mb-2">{project.description}</p>
-  <div class="flex gap-2">
+  <p class="text-base text-gray-400">{project.description}</p>
+
+  <div class="flex items-center gap-2 mt-4">
     {
       project.tools.map((tool: { name: string; value: string }) => (
         <Badge>

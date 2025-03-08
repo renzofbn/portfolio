@@ -1,9 +1,10 @@
 ---
-const { url } = Astro.props;
+const { url, text = "Return" } = Astro.props;
 ---
 
 <a
-  class="-mt-8 flex items-center gap-2 text-red-400 font-base text-base"
+  class="pt-8 flex items-center gap-2 text-red-400 font-base text-base
+  transition-transform duration-300 hover:-translate-x-2 hover:-translate-y-2 hover:text-red-400/50"
   href={url}
 >
   <svg
@@ -19,5 +20,6 @@ const { url } = Astro.props;
     ><rect width="18" height="18" x="3" y="3" rx="2"></rect><path
       d="m12 8-4 4 4 4"></path><path d="M16 12H8"></path></svg
   >
-  Return <span class="ml-1 w-full border-b border-primary"></span></a
+  {text}
+  <span class="ml-1 w-full border-b border-primary"></span></a
 >
