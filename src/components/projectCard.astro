@@ -10,16 +10,16 @@ const { project } = Astro.props;
       project.live_url ? (
         <a
           href={project.live_url}
-          class="group hidden items-center space-x-[4px] text-sm tracking-tight md:flex hover:text-gray-400"
+          class="items-center space-x-[4px] text-sm tracking-tight flex hover:text-gray-400"
           target="_blank"
         >
-          <h2 class="text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline">
+          <h2 class="text-xl md:text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline">
             {project.title}
           </h2>
 
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5"
+            class="md:w-5 md:h-5 w-4 h-4"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -40,6 +40,7 @@ const { project } = Astro.props;
         </h2>
       )
     }
+
     {
       project.gh_url && (
         <a
@@ -50,7 +51,7 @@ const { project } = Astro.props;
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="w-6 h-6"
+            class="md:w-6 md:h-6 w-5 h-5"
             viewBox="0 0 24 24"
           >
             <path
@@ -63,7 +64,7 @@ const { project } = Astro.props;
     }
   </div>
 
-  <p class="text-base text-gray-400">{project.description}</p>
+  <p class="text-sm md:text-base text-gray-400">{project.description}</p>
 
   <div class="flex items-center gap-2 mt-4">
     {
@@ -72,7 +73,7 @@ const { project } = Astro.props;
           <img
             src={`/assets/${tool.value}.svg`}
             alt={tool.name}
-            class="w-5 h-5"
+            class="md:w-5 md:h-5 w-4 h-4"
           />
           {tool.name}
         </Badge>

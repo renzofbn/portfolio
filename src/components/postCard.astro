@@ -7,7 +7,7 @@ const { title, url, desc, tags, date } = Astro.props;
 <div class="border-b-2 border-dashed border-neutral-800 py-4">
   <a href={url}>
     <div>
-      <span class="text-xs text-gray-500 font-bold">
+      <span class="text-xs md:text-sm text-gray-500 font-bold">
         {
           new Date(date).toLocaleDateString("en-US", {
             year: "numeric",
@@ -17,13 +17,13 @@ const { title, url, desc, tags, date } = Astro.props;
         }</span
       >
       <h2
-        class="text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline"
+        class="text-xl md:text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline"
       >
         {title}
       </h2>
     </div>
   </a>
-  <p class="text-base text-gray-400">{desc}</p>
+  <p class="text-sm md:text-base text-gray-400">{desc}</p>
   <div class="flex items-center justify-between mt-4">
     <div class="flex items-center gap-2">
       {
@@ -50,25 +50,5 @@ const { title, url, desc, tags, date } = Astro.props;
         ))
       }
     </div>
-    <!-- <a
-        href={url}
-        class="group hidden items-center space-x-[4px] text-sm tracking-tight opacity-70 transition-opacity duration-100 hover:opacity-100 md:flex"
-        ><Badge>
-          Read more
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-4 h-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide-icon lucide lucide-chevron-right duration-150 group-hover:translate-x-[2px]"
-          >
-            <path d="m9 18 6-6-6-6"></path></svg
-          >
-        </Badge>
-      </a> -->
   </div>
 </div>
