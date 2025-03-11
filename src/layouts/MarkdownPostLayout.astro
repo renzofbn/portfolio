@@ -31,7 +31,9 @@ import Footer from "../components/footer.astro";
 <Layout title={`${frontmatter.title} | renzofbn`}>
   <div class="tracker"></div>
   <div class="flex justify-center">
-    <div class="container max-w-4xl text-left px-6 md:px-24 mt-6 md:mt-16">
+    <div
+      class="container max-w-4xl text-left px-6 md:px-24 mt-6 lg:mt-10 2xl:mt-16"
+    >
       <GoBack url="/posts" />
       <div class="md:px-8">
         <div class="mb-6">
@@ -45,7 +47,9 @@ import Footer from "../components/footer.astro";
                 })
               }
             </span>
-            <h1 class="text-3xl font-extrabold text-white">
+            <h1
+              class="text-3xl font-extrabold text-white duration-150 first:pl-0 last:pr-0 drop-shadow-[0px_0px_10px_#666666]"
+            >
               {frontmatter.title}
             </h1>
           </div>
@@ -95,6 +99,24 @@ import Footer from "../components/footer.astro";
             </ol>
           </nav>
           <slot />
+          <button
+            id="scrollToTop"
+            class="fixed bottom-6 right-6 z-50 rounded-full shadow-lg transition-opacity duration-300 opacity-100 bg-[#121313] p-4 md:hover:opacity-20 hidden"
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-6 h-6"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="lucide lucide-arrow-up"
+              ><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg
+            >
+          </button>
         </article>
         <Footer />
       </div>
@@ -103,6 +125,27 @@ import Footer from "../components/footer.astro";
     <script>
       import "../CopyCodeButton/copy-code-button.js";
       import "../CopyCodeButton/create-copy-buttons.js";
+    </script>
+
+    <script>
+      function setupScrollToTop() {
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        if (!scrollToTopBtn) return;
+
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 300) {
+            scrollToTopBtn.classList.remove("hidden", "opacity-0");
+            scrollToTopBtn.classList.add("opacity-100");
+          } else {
+            scrollToTopBtn.classList.add("hidden", "opacity-0");
+            scrollToTopBtn.classList.remove("opacity-100");
+          }
+        });
+      }
+
+      document.addEventListener("astro:page-load", setupScrollToTop);
+      document.addEventListener("astro:after-swap", setupScrollToTop);
     </script>
 
     <style is:global>
@@ -147,6 +190,7 @@ import Footer from "../components/footer.astro";
 
       .md-post pre code span {
         font-family: "Geist Mono", system-ui, sans-serif;
+        font-weight: 500;
       }
 
       .md-post pre copy-code-button {
