@@ -3,19 +3,21 @@
 ## 1. Todo
 
 **Design**
-  - [] Agregar letras negritas a ciertas letras del texto
   - [] Mejorar el efecto de glow del background
-  - [] Revisar una forma de hacer el texto del centro mas legible
-
+  - [] Unificar el comportamiento y todos los links que tengan ese glow
+  - [] Acercar el boton de hacia arriba al texto
+  - [] Hacer la funcion de copiar codigo dentro del mismo archivo
+  - [] Hacer el diseno del titulo de los posts
 
 **Blog**
   - [] Redactar 3 post al ingles
 
+ **Projects**
+  - [] Agregar 3 proyectos mas 
+
 **Performance**
-  - [] Optimizar las fuentes
-  - [] Agregar metadatos
-  - [] Quitar Lit
   
+
 
 ## Done
 
@@ -26,7 +28,10 @@
   - [X] Agregar un underline a los links
   - [X] Hacer la pagina 404
   - [X] Revisar como se ve en telefonos
-  - [] Hacer el diseno de proyectos
+  - [X] Hacer el diseno de proyectos
+  - [X] Revisar una forma de hacer el texto del centro mas legible
+  - [X] Agregar letras negritas a ciertas letras del texto
+
 
   **Blog**
   - [X] Hacer el diseno del blog
@@ -35,6 +40,10 @@
   - [X] Layout con titulo personalizado
   - [X] Agregar boton de copiar
 
+  **Performance**
+  - [X] Agregar metadatos
+  - [X] Quitar Lit
+  - [X] Optimizar las fuentes
 
 ## Canceled
  - Header al post (con busqueda)
