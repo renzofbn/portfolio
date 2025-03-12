@@ -2,6 +2,7 @@
 import Badge from "../components/badge.astro";
 import GoBack from "../components/goBack.astro";
 import Layout from "../layouts/Layout.astro";
+import Footer from "./footer.astro";
 
 const { n_repo } = Astro.props;
 ---
@@ -20,11 +21,11 @@ const { n_repo } = Astro.props;
           Projects
         </h1>
         <p class="text-lg text-gray-400">
-          Este es un texto alineado a la izquierda dentro de una columna
-          centrada.
+          "What we have to learn, we learn by doing." - Aristotle
         </p>
       </div>
       <slot />
+      <Footer />
     </div>
   </div>
 </Layout>

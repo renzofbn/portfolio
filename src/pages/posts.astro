@@ -1,5 +1,5 @@
 ---
-import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.astro";
 import Layout from "../layouts/Layout.astro";
 import PostCard from "../components/postCard.astro";
 import GoBack from "../components/goBack.astro";
@@ -22,8 +22,8 @@ const allPosts = Object.values(
           Posts
         </h1>
         <p class="md:text-lg text-gray-400">
-          Este es un texto alineado a la izquierda dentro de una columna
-          centrada.
+          "Learning is the only thing that the mind never exhausts, never fears
+          and never regrets." - Leonardo Da Vinci
         </p>
       </div>
       <div>
@@ -39,6 +39,7 @@ const allPosts = Object.values(
           ))
         }
       </div>
+      <Footer />
     </div>
   </div>
 </Layout>

@@ -8,6 +8,7 @@
   - [] Acercar el boton de hacia arriba al texto
   - [] Hacer la funcion de copiar codigo dentro del mismo archivo
   - [] Hacer el diseno del titulo de los posts
+  - [] Agregar el efecto de entrada al cargar la pagina
 
 **Blog**
   - [] Redactar 3 post al ingles
