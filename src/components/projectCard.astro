@@ -13,26 +13,9 @@ const { project } = Astro.props;
           class="items-center space-x-[4px] text-sm tracking-tight flex hover:text-gray-400"
           target="_blank"
         >
-          <h2 class="text-xl md:text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline">
+          <h2 class="text-xl md:text-2xl font-bold text-gray-50  duration-150 first:pl-0 last:pr-0 hover:scale-110 hover:drop-shadow-[0px_0px_10px_#FF6467] decoration-dotted">
             {project.title}
           </h2>
-
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="md:w-5 md:h-5 w-4 h-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-arrow-up-right"
-          >
-            <>
-              <path d="M7 7h10v10" />
-              <path d="M7 17 17 7" />
-            </>
-          </svg>
         </a>
       ) : (
         <h2 class="text-2xl font-bold text-gray-50 hover:text-gray-400 hover:underline">

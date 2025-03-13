@@ -4,9 +4,7 @@
 
 **Design**
   - [] Mejorar el efecto de glow del background
-  - [] Unificar el comportamiento y todos los links que tengan ese glow
   - [] Acercar el boton de hacia arriba al texto
-  - [] Hacer la funcion de copiar codigo dentro del mismo archivo
   - [] Hacer el diseno del titulo de los posts
   - [] Agregar el efecto de entrada al cargar la pagina
 
@@ -32,6 +30,9 @@
   - [X] Hacer el diseno de proyectos
   - [X] Revisar una forma de hacer el texto del centro mas legible
   - [X] Agregar letras negritas a ciertas letras del texto
+  - [X] Hacer la funcion de copiar codigo dentro del mismo archivo
+  - [X] Unificar el comportamiento y todos los links que tengan ese glow
+
 
 
   **Blog**
