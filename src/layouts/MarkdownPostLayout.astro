@@ -14,7 +14,7 @@ function buildToc(headings: any) {
     const heading = { ...h, subheadings: [] };
     parentHeadings.set(heading.depth, heading);
     // Change 2 to 1 if your markdown includes your <h1>
-    if (heading.depth === 1) {
+    if (heading.depth === 2) {
       toc.push(heading);
     } else {
       parentHeadings.get(heading.depth - 1).subheadings.push(heading);
@@ -166,16 +166,16 @@ import Footer from "../components/footer.astro";
       }
 
       function addStyleToTitle() {
-        const h1s = document.querySelectorAll("article.md-post h1");
-        h1s.forEach((title) => {
-          if (
-            title.firstElementChild &&
-            title.firstElementChild.tagName.toLowerCase() === "span"
-          ) {
-            return;
-          }
-          title.innerHTML = `<span class="text-3xl font-bold text-[#F46161]"> # </span> ${title.innerHTML}`;
-        });
+        // const h1s = document.querySelectorAll("article.md-post h1");
+        // h1s.forEach((title) => {
+        //   if (
+        //     title.firstElementChild &&
+        //     title.firstElementChild.tagName.toLowerCase() === "span"
+        //   ) {
+        //     return;
+        //   }
+        //   title.innerHTML = `<span class="text-3xl font-bold text-[#F46161]"> # </span> ${title.innerHTML}`;
+        // });
 
         let h2s = document.querySelectorAll("article.md-post h2");
         h2s.forEach((title) => {
@@ -185,7 +185,7 @@ import Footer from "../components/footer.astro";
           ) {
             return;
           }
-          title.innerHTML = `<span class="text-2xl font-bold text-[#E07D48]"> ## </span> ${title.innerHTML}`;
+          title.innerHTML = `<span class="text-3xl font-bold text-[#F46161]"> # </span> ${title.innerHTML}`;
         });
 
         let h3s = document.querySelectorAll("article.md-post h3");
@@ -196,7 +196,7 @@ import Footer from "../components/footer.astro";
           ) {
             return;
           }
-          title.innerHTML = `<span class="text-xl font-bold text-[#4E9E76]"> ### </span> ${title.innerHTML}`;
+          title.innerHTML = `<span class="text-2xl font-bold text-[#E07D48]"> ## </span> ${title.innerHTML}`;
         });
 
         let h4s = document.querySelectorAll("article.md-post h4");
@@ -207,8 +207,10 @@ import Footer from "../components/footer.astro";
           ) {
             return;
           }
-          title.innerHTML = `<span class="text-lg font-bold text-[#985BC4]"> #### </span> ${title.innerHTML}`;
+          title.innerHTML = `<span class="text-xl font-bold text-[#4E9E76]"> ### </span> ${title.innerHTML}`;
         });
+
+        // 985BC4
       }
 
       class CopyCodeButton extends HTMLElement {
@@ -306,39 +308,39 @@ import Footer from "../components/footer.astro";
     </script>
 
     <style is:global>
-      .md-post h1 {
+      /* .md-post h1 {
         font-size: 30px;
         padding-top: 30px;
         margin-bottom: 24px;
         font-weight: 600;
         color: white;
-      }
+      } */
 
       .md-post h2 {
+        font-size: 30px;
+        padding-top: 30px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .md-post h3 {
         font-size: 24px;
         padding-top: 24px;
         margin-bottom: 1rem;
         font-weight: 600;
       }
 
-      .md-post h3 {
+      .md-post h4 {
         font-size: 20px;
         padding-top: 20px;
         margin-bottom: 1rem;
         font-weight: 600;
       }
 
-      .md-post h4 {
-        font-size: 18px;
-        padding-top: 18px;
-        margin-bottom: 1rem;
-        font-weight: 600;
-      }
-
       .md-post h5,
       .md-post h6 {
-        font-size: 16px;
-        padding-top: 16px;
+        font-size: 18px;
+        padding-top: 18px;
         margin-bottom: 1rem;
         font-weight: 600;
       }

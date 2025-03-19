@@ -13,7 +13,7 @@ tableOfContents: true
 
 To understand how decorators work, we first need to grasp the concept of **closures**.
 
-# **Closures in Python**
+## **Closures in Python**
 
 Una función que guarda referencias a variables locales en su entorno de definición, incluso cuando la función ha terminado de ejecutarse. Esto significa que la función puede acceder y recordar los valores de esas variables aunque ya no existan en la memoria. El concepto de closure se basa en la capacidad de Python de tratar las funciones como objetos de primera clase, lo que permite que las funciones sean asignadas a variables, pasadas como argumentos y retornadas como valores.
 
@@ -55,7 +55,7 @@ contador2 = contador()
 contador2()  # Output: Contador: 1
 ```
 
-# @decorando
+##@decorando
 
 Los decoradores aprovechan los closures para envolver funciones o clases y modificar su comportamiento agregando funcionalidad adicional antes o después de su ejecución, sin modificar su implementación original.
 
