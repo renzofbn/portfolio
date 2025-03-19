@@ -122,11 +122,6 @@ import Footer from "../components/footer.astro";
       </div>
     </div>
 
-    <!-- <script>
-      import "../CopyCodeButton/copy-code-button.js";
-      import "../CopyCodeButton/create-copy-buttons.js";
-    </script> -->
-
     <script>
       // @ts-nocheck
       function setupScrollToTop() {
@@ -155,6 +150,52 @@ import Footer from "../components/footer.astro";
             block.style.position = "relative"; // Asegura que el botón se posicione correctamente
             block.appendChild(copyButton);
           }
+        });
+      }
+
+      function addStyleToTitle() {
+        const h1s = document.querySelectorAll("article.md-post h1");
+        h1s.forEach((title) => {
+          if (
+            title.firstElementChild &&
+            title.firstElementChild.tagName.toLowerCase() === "span"
+          ) {
+            return;
+          }
+          title.innerHTML = `<span class="text-3xl font-bold text-[#F46161]"> # </span> ${title.innerHTML}`;
+        });
+
+        let h2s = document.querySelectorAll("article.md-post h2");
+        h2s.forEach((title) => {
+          if (
+            title.firstElementChild &&
+            title.firstElementChild.tagName.toLowerCase() === "span"
+          ) {
+            return;
+          }
+          title.innerHTML = `<span class="text-2xl font-bold text-[#E07D48]"> ## </span> ${title.innerHTML}`;
+        });
+
+        let h3s = document.querySelectorAll("article.md-post h3");
+        h3s.forEach((title) => {
+          if (
+            title.firstElementChild &&
+            title.firstElementChild.tagName.toLowerCase() === "span"
+          ) {
+            return;
+          }
+          title.innerHTML = `<span class="text-xl font-bold text-[#4E9E76]"> ### </span> ${title.innerHTML}`;
+        });
+
+        let h4s = document.querySelectorAll("article.md-post h4");
+        h4s.forEach((title) => {
+          if (
+            title.firstElementChild &&
+            title.firstElementChild.tagName.toLowerCase() === "span"
+          ) {
+            return;
+          }
+          title.innerHTML = `<span class="text-lg font-bold text-[#985BC4]"> #### </span> ${title.innerHTML}`;
         });
       }
 
@@ -251,6 +292,8 @@ import Footer from "../components/footer.astro";
       customElements.define("copy-code-button", CopyCodeButton);
 
       // Ejecutar cuando la página haya cargado
+      document.addEventListener("astro:page-load", addStyleToTitle);
+      document.addEventListener("astro:after-swap", addStyleToTitle);
       document.addEventListener("astro:page-load", createCopyButtons);
       document.addEventListener("astro:after-swap", createCopyButtons);
       document.addEventListener("astro:page-load", setupScrollToTop);
@@ -259,16 +302,38 @@ import Footer from "../components/footer.astro";
 
     <style is:global>
       .md-post h1 {
-        font-size: 24px;
-        padding-top: 2rem;
+        font-size: 30px;
+        padding-top: 30px;
         margin-bottom: 24px;
         font-weight: 600;
         color: white;
       }
 
       .md-post h2 {
-        font-size: 1.25rem;
-        padding-top: 2rem;
+        font-size: 24px;
+        padding-top: 24px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .md-post h3 {
+        font-size: 20px;
+        padding-top: 20px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .md-post h4 {
+        font-size: 18px;
+        padding-top: 18px;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .md-post h5,
+      .md-post h6 {
+        font-size: 16px;
+        padding-top: 16px;
         margin-bottom: 1rem;
         font-weight: 600;
       }
