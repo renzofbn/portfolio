@@ -4,19 +4,15 @@
 
 **Design**
   - [] Mejorar el efecto de glow del background
-  - [] Acercar el boton de hacia arriba al texto
-  - [] Hacer el diseno del titulo de los posts
+
   - [] Agregar el efecto de entrada al cargar la pagina
+  - [] Cambiar h1s por h2s
 
 **Blog**
-  - [] Redactar 3 post al ingles
 
- **Projects**
-  - [] Agregar 3 proyectos mas 
+**Projects**
 
 **Performance**
-  
-
 
 ## Done
 
@@ -32,7 +28,11 @@
   - [X] Agregar letras negritas a ciertas letras del texto
   - [X] Hacer la funcion de copiar codigo dentro del mismo archivo
   - [X] Unificar el comportamiento y todos los links que tengan ese glow
+  - [X] Hacer el diseno del titulo de los posts
 
+
+**Projects**
+  - [X] Agregar 3 proyectos mas 
 
 
   **Blog**
@@ -41,6 +41,8 @@
   - [X] Hacer el footer del blog
   - [X] Layout con titulo personalizado
   - [X] Agregar boton de copiar
+  - [X] Redactar 3 post al ingles
+
 
   **Performance**
   - [X] Agregar metadatos
@@ -49,3 +51,4 @@
 
 ## Canceled
  - Header al post (con busqueda)
+ - Acercar el boton de hacia arriba al texto
