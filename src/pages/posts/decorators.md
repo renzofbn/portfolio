@@ -2,9 +2,9 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Decorators in Python'
 pubDate: 2025-03-01
-description: 'This is the first post of my new Astro blog.'
+description: 'A brief introduction to decorators in Python, and how they work.'
 author: 'renzofbn'
-tags: ["Python"]
+tags: ["Python", "Theory"]
 tableOfContents: true
 ---
 

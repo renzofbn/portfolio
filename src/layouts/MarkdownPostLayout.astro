@@ -142,13 +142,25 @@ import Footer from "../components/footer.astro";
 
       // Agrega botones de copiar a cada bloque de código
       function createCopyButtons() {
-        let blocks = document.querySelectorAll("pre");
-        blocks.forEach((block) => {
-          if (!block.querySelector("copy-code-button")) {
+        document.querySelectorAll("pre").forEach((block) => {
+          if (!block.parentElement.classList.contains("code-wrapper")) {
+            // Crear el contenedor div
+            let wrapper = document.createElement("div");
+            wrapper.classList.add("code-wrapper");
+            wrapper.style.display = "flex";
+            wrapper.style.marginBottom = "20px";
+            wrapper.style.width = "100%"; // Hace que ocupe todo el ancho del padre
+
+            // Crear el botón de copiar
             // Evitar botones duplicados
             let copyButton = document.createElement("copy-code-button");
             block.style.position = "relative"; // Asegura que el botón se posicione correctamente
             block.appendChild(copyButton);
+
+            // Insertar los elementos en el contenedor
+            block.parentNode.insertBefore(wrapper, block);
+            wrapper.appendChild(block);
+            wrapper.appendChild(copyButton);
           }
         });
       }
@@ -255,13 +267,9 @@ import Footer from "../components/footer.astro";
         render() {
           this.shadowRoot.innerHTML = `
       <style>
-        :host {
-          display: inline-flex;
-        }
+
         button {
           display: inline-flex;
-          align-items: center;
-          justify-content: center;
           width: fit-content;
           margin: 0;
           padding: 0.5rem;
@@ -354,28 +362,52 @@ import Footer from "../components/footer.astro";
 
       .md-post pre {
         padding: 1rem;
-        border-radius: 0.75rem;
+        border-radius: 0.75rem 0 0 0.75rem;
         overflow-x: auto;
         font-size: 15px;
-        margin-bottom: 22px;
-        overflow: auto;
-        position: relative;
+        width: 100%;
+      }
+
+      /* Estilos globales para todas las barras de desplazamiento */
+      * {
+        scrollbar-width: thin; /* Hace la barra más delgada en Firefox */
+        scrollbar-color: #555 #121212; /* Color del thumb y del fondo en Firefox */
+      }
+
+      /* Para navegadores basados en WebKit (Chrome, Edge, Safari) */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+
+      /* Color del fondo de la barra */
+      ::-webkit-scrollbar-track {
+        background: #121212; /* Muy oscuro */
+        border-radius: 4px;
+      }
+
+      /* Color y estilo del "thumb" (el indicador de desplazamiento) */
+      ::-webkit-scrollbar-thumb {
+        background: #555; /* Gris oscuro */
+        border-radius: 4px;
+      }
+
+      /* Cuando el usuario pasa el mouse sobre la barra */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #777; /* Gris más claro */
+      }
+
+      .md-post copy-code-button {
+        background-color: #121212;
+        border-radius: 0 0.75rem 0.75rem 0;
+        padding-right: 4px;
+        padding-top: 6px;
+        padding-left: 4px;
       }
 
       .md-post pre code span {
         font-family: "Geist Mono", system-ui, sans-serif;
         font-weight: 500;
-      }
-
-      pre {
-        position: relative !important; /* Asegurar que sea el contenedor de referencia */
-      }
-
-      copy-code-button {
-        position: absolute !important;
-        top: 8px !important;
-        right: 8px !important;
-        z-index: 10 !important; /* Asegura que esté por encima del contenido */
       }
 
       .md-post p code {
