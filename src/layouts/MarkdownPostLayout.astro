@@ -300,12 +300,9 @@ import Footer from "../components/footer.astro";
       customElements.define("copy-code-button", CopyCodeButton);
 
       // Ejecutar cuando la página haya cargado
-      document.addEventListener("astro:page-load", addStyleToTitle);
-      document.addEventListener("astro:after-swap", addStyleToTitle);
-      document.addEventListener("astro:page-load", createCopyButtons);
-      document.addEventListener("astro:after-swap", createCopyButtons);
-      document.addEventListener("astro:page-load", setupScrollToTop);
-      document.addEventListener("astro:after-swap", setupScrollToTop);
+      document.addEventListener("DOMContentLoaded", addStyleToTitle);
+      document.addEventListener("DOMContentLoaded", createCopyButtons);
+      document.addEventListener("DOMContentLoaded", setupScrollToTop);
     </script>
 
     <style is:global>
