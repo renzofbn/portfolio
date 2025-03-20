@@ -185,7 +185,7 @@ import Footer from "../components/footer.astro";
           ) {
             return;
           }
-          title.innerHTML = `<span class="text-3xl font-bold text-[#F46161]"> # </span> ${title.innerHTML}`;
+          title.innerHTML = `<span class="text-3xl font-bold title-1"> # </span> ${title.innerHTML}`;
         });
 
         let h3s = document.querySelectorAll("article.md-post h3");
@@ -196,7 +196,7 @@ import Footer from "../components/footer.astro";
           ) {
             return;
           }
-          title.innerHTML = `<span class="text-2xl font-bold text-[#E07D48]"> ## </span> ${title.innerHTML}`;
+          title.innerHTML = `<span class="text-2xl font-bold title-2"> ## </span> ${title.innerHTML}`;
         });
 
         let h4s = document.querySelectorAll("article.md-post h4");
@@ -207,10 +207,8 @@ import Footer from "../components/footer.astro";
           ) {
             return;
           }
-          title.innerHTML = `<span class="text-xl font-bold text-[#4E9E76]"> ### </span> ${title.innerHTML}`;
+          title.innerHTML = `<span class="text-xl font-bold title-3"> ### </span> ${title.innerHTML}`;
         });
-
-        // 985BC4
       }
 
       class CopyCodeButton extends HTMLElement {
@@ -308,13 +306,21 @@ import Footer from "../components/footer.astro";
     </script>
 
     <style is:global>
-      /* .md-post h1 {
-        font-size: 30px;
-        padding-top: 30px;
-        margin-bottom: 24px;
-        font-weight: 600;
-        color: white;
-      } */
+      .md-post .title-1 {
+        color: #f46161;
+      }
+
+      .md-post .title-2 {
+        color: #e07d48;
+      }
+
+      .md-post .title-3 {
+        color: #4e9e76;
+      }
+
+      .md-post .title-4 {
+        color: #985bc4;
+      }
 
       .md-post h2 {
         font-size: 30px;
@@ -354,9 +360,23 @@ import Footer from "../components/footer.astro";
         text-wrap: pretty;
       }
 
-      .md-post p strong {
+      .md-post strong {
         font-weight: 700;
+        color: #f46161;
+      }
+
+      .md-post p em {
+        font-weight: 600;
+        font-style: italic;
         color: #e07d48;
+      }
+
+      .md-post ul {
+        padding-left: 30px;
+        list-style-type: disc;
+      }
+      .md-post ul li::marker {
+        color: #a3a3a3;
       }
 
       .md-post pre {
