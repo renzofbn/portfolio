@@ -4,9 +4,8 @@
 
 **Design**
   - [] Mejorar el efecto de glow del background
-
   - [] Agregar el efecto de entrada al cargar la pagina
-  - [] Cambiar h1s por h2s
+  - [] Agregar un convertidor de link a referencia en los blogs (talvez en js)
 
 **Blog**
 
@@ -29,6 +28,8 @@
   - [X] Hacer la funcion de copiar codigo dentro del mismo archivo
   - [X] Unificar el comportamiento y todos los links que tengan ese glow
   - [X] Hacer el diseno del titulo de los posts
+  - [x] Cambiar h1s por h2s
+
 
 
 **Projects**
