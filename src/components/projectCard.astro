@@ -56,9 +56,9 @@ const { project } = Astro.props;
           <img
             src={`/assets/${tool.value}.svg`}
             alt={tool.name}
-            class="md:w-5 md:h-5 w-4 h-4"
+            class="md:w-5 md:h-5 w-4 h-4 object-contain"
           />
-          {tool.name}
+          <span class="flex items-center h-full"> {tool.name} </span>
         </Badge>
       ))
     }
