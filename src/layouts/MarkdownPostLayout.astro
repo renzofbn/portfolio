@@ -374,11 +374,13 @@ import Footer from "../components/footer.astro";
       .md-post ul {
         padding-left: 30px;
         list-style-type: disc;
+        margin-bottom: 14px;
       }
 
       .md-post ol {
         padding-left: 30px;
         list-style-type: decimal;
+        margin-bottom: 14px;
       }
       .md-post ol li::marker {
         color: #a3a3a3;
@@ -423,6 +425,24 @@ import Footer from "../components/footer.astro";
         margin: 0;
         padding: 0;
       }
+
+      .md-post img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0.75rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .md-post p i a{
+        color: #f46161;
+        text-decoration: underline;
+      }
+
+      .md-post p i{
+        font-weight: 300;
+        font-size: 14px;
+      }
+
 
       /* Estilos globales para todas las barras de desplazamiento */
       * {

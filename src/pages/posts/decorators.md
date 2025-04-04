@@ -7,13 +7,16 @@ author: 'renzofbn'
 tags: ["Python", "Theory"]
 tableOfContents: true
 ---
+
 Decorators in Python are a **powerful and elegant** way to modify or extend the behavior of a function or class without altering its original implementation.
 
 To understand how decorators work, we first need to grasp the concept of **closures**.
 
 ## Closures
 
-Are functions that remembers the environment in which they were created. Even if the outer function finishes execution, the inner function can still access the variables from that scope. This feature allows you to *remember* values across multiple function calls.
+Those functions that remembers the environment in which they were created are called `closures`.
+
+Even if the outer function finishes execution, the inner function can still access the variables from that scope. This feature allows you to *remember* values across multiple function calls.
 
 
 ```python
@@ -26,19 +29,20 @@ def make_multiplier(n):
 times3 = make_multiplier(3)
 # Output: 12
 print(times3(4))
+# Output: 15
+print(times3(5))
 ```
 
 
 *Explanation:*  
-Here, `make_multiplier` returns the `multiplier` function. The inner function keeps the value of `n` (in this case, 3), so every time you call `times3`, it multiplies its argument by 3.
+Here, `make_multiplier` returns the `multiplier` function, which remembers the value of `n` (in this case, 3). Every time you call `times3` (made it from `multiplier`), it multiplies its argument by 3.
 
 > [!TIP]  
-> Remember that the main function must always return the nested function.  
-
+> Remember that the main function must always return the nested function.
 
 ## Decorators
 
-Now that we understand closures and how they work, we can talk about **decorators**, we can create them by defining a function that takes another function as input and returns a new function that wraps the original one.
+Now that we understand **closures** and how they work, we can talk about **decorators**, we can create them by defining a function that takes another function as input and returns a new function that wraps the original one.
 
 ```python
 def friendly_decorator(func):
@@ -48,6 +52,9 @@ def friendly_decorator(func):
         print("Function executed!")
     return wrapper
 ```
+
+>[!IMPORTANT]
+> The `wrapper` function is the one that will be called when the decorated function is executed. So it's where you can **add your custom logic** and it should have **the same arguments** as the original function.
 
 *Explanation:*  
 The `friendly_decorator` takes a function as input, wraps it in another function `wrapper`, and adds custom behavior. The wrapper can modify inputs, outputs, or even perform additional tasks around the original function call.
@@ -80,6 +87,9 @@ say_goodbye("Alice")
 *Explanation:*  
 Here, `goodbye_to` is wrapped by `friendly_decorator`, creating a new function `say_goodbye` that includes the custom behavior. This way, you can apply the decorator to any function you want.
 
+>[!NOTE]
+> Example using the decorator from above.
+
 ### With @ Syntax
 
 The `@` symbol provides a cleaner and more readable way to apply a decorator.
@@ -104,20 +114,22 @@ greet("Bob")
 The `@friendly_decorator` syntax automatically wraps `greet` with the decorator, making your code easier to follow.
 
 
-## Adding Parameters
+## Decorators with Arguments
 
 Sometimes you need a decorator to accept its own arguments. To do this, create an extra outer function that takes these parameters and returns the actual decorator.
 
 ```python
-def decorator_with_params(param1, param2):
+def decorator_with_arguments(arg1, arg2):
     def decorator(func):
         def wrapper(*args, **kwargs):
-            print(f"Using parameters: {param1} and {param2}")
+            print(f"Using parameters: {arg1} and {arg2}")
             return func(*args, **kwargs)
         return wrapper
     return decorator
+```
 
-@decorator_with_params("Welcome", 42)
+```python
+@decorator_with_arguments("Welcome", 42)
 def greet_person(name):
     print(f"Hello, {name}!")
 

@@ -3,11 +3,12 @@
 ## 1. Todo
 
 **Design**
-  - [] Mejorar el efecto de glow del background
+  - [] Agregar el efecto de glow del background
   - [] Agregar el efecto de entrada al cargar la pagina
   - [] Agregar un convertidor de link a referencia en los blogs (talvez en js)
 
 **Blog**
+  - [] Agregar un estilo tipo link a los titulos
 
 **Projects**
 

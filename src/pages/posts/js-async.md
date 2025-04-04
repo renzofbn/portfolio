@@ -8,34 +8,37 @@ author: 'renzofbn'
 tags: ["Javascript", "Theory"]  
 tableOfContents: true  
 ---
-## Understanding Asynchronous JavaScript
 
-### What is Asynchrony?
+Asynchronous programming allows JavaScript to execute tasks in a non-blocking manner.
 
-Asynchronous programming allows JavaScript to execute tasks in a non-blocking manner. This means that the program can continue executing other tasks while waiting for an operation (such as a network request or a file read operation) to complete.
+This means that the program **can continue executing other tasks while waiting for an operation** (such as a network request or a file read operation) to complete.
 
-JavaScript, being single-threaded, uses an event-driven, non-blocking model to handle asynchronous operations efficiently. Asynchronous code execution is essential for:
+<img src="/imgs/synchronous-vs-asynchronous-javascript.webp" alt="synchronous-vs-asynchronous-javascript" />
+<p><i>Taken from: <a href="https://medium.com/@vivianyim/synchronous-vs-asynchronous-javascript-de4918e8ad62" target="_blank">Medium</a></i></p>
+
+Asynchronous programming is essential for doing tasks that take time, such as:
 
 - Fetching data from APIs.
 - Handling user interactions.
 - Executing time-based operations.
 - Running tasks without freezing the UI in web applications.
 
-JavaScript provides multiple ways to work with asynchrony:
+That's why JavaScript provides multiple ways to work with asynchrony:
 
-1. **Callbacks** (older approach).
-2. **Promises** (modern and structured way).
-3. **Async/Await** (syntactic sugar over Promises for better readability).
+1. **Callbacks**
+2. **Promises**
+3. **Async/Await**
 
 ---
 
-## Callbacks: The First Approach to Asynchrony
+## Callbacks
+>[!WARNING]
+> Callbacks are the first approach to handle asynchrony in JavaScript. However, they can lead to nested callbacks, making the code hard to read and maintain.
 
 A **callback function** is a function passed as an argument to another function, which is executed after an asynchronous operation completes.
 
-### Example: Using a Callback in a Simulated API Request
-
 ```jsx
+// Example: Using a Callback in a Simulated API Request
 function fetchData(callback) {
   setTimeout(() => {
     const data = "Data retrieved";
@@ -44,7 +47,9 @@ function fetchData(callback) {
 }
 
 fetchData((data) => {
-  console.log(data); // Prints "Data retrieved" after 2 seconds
+  console.log(data); 
+  // Output: "Data retrieved"
+  // after 2 seconds
 });
 ```
 
